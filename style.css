@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1a4a 45%, #0f62fe 100%);
+}
+
+.clock {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  background:linear-gradient(135deg, #03e7a3 0%, #f54848 45%, #e25d05 100%);/* gray clock face */
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #bfbfbf; /* thin outer ring */
+}
+
+/* Brand text near the top */
+.brand {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #2f5233;
+}
+
+/* Numbers 12, 3, 6, 9 */
+.number {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  color: #070000;
+}
+
+.twelve {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three {
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nine {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+/* Center pivot dot */
+.center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #03e7a3 0%, #0f0000 45%, #05e247 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* Shared hand styling */
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  border-radius: 4px;
+}
+
+/* Hour hand - points toward 10-11 */
+.hour-hand {
+  width: 6px;
+  height: 55px;
+  background: #ffffff;
+  transform: translate(-50%, -100%) rotate(-25deg);
+  z-index: 2;
+}
+
+/* Minute hand - points toward 3 */
+.minute-hand {
+  width: 5px;
+  height: 70px;
+  background: #ffffff;
+  transform: translate(-50%, -100%) rotate(85deg);
+  z-index: 2;
+}
+
+/* Second hand - points toward 9 (thin orange/gold) */
+.second-hand {
+  width: 3px;
+  height: 65px;
+  background: linear-gradient(135deg, #010838 0%, #33339e 45%, #0f62fe 100%);
+  transform: translate(-50%, -100%) rotate(-95deg);
+  z-index: 1;
+}
