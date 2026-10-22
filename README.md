@@ -4,6 +4,8 @@ Analog clock practice using JavaScript Date, timed updates and CSS transforms fo
 
 Part of my JavaScript practice work. Explore my complete projects on [GitHub](https://github.com/awaljanhematyar) or my [developer portfolio](https://hematyar-professional-portfolio.vercel.app/).
 
+[Live demo](https://awaljanhematyar.github.io/clock/)
+
 ## Features
 
 - Read the current device time.
